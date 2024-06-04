@@ -1,0 +1,33 @@
+h1 {
+    font-family: "Arial";
+}
+
+p {
+    font-family: "Dancing Script", cursive;
+}
+
+body {
+    font-size: 20px;
+}
+
+
+/* 
+'em' changes depending on the parents size
+
+For Example:
+The 'body' tag is the parent element to the tag with the id "two". Since the parent element
+has a font size of 16px, the font size within the tag with the id of "two" is going to be
+32px.
+*/
+#two {
+    font-size: 1.0em;
+}
+
+p {
+    font-style: italic;
+    font-weight: bold;
+}
+
+h1 {
+    text-align: center;
+}
