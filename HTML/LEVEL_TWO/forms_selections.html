@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Feedback</title>
+</head>
+<body>
+    <h1>Hotel Feedback Form</h1>
+
+    <form method="get">
+        <h2>Are you form inside the US? or outside the US?</h2>
+        
+        <!-- Note: Linking radio buttons together: Give them the same 'name' attribute -->
+        <label for="inusa">Inside: </label>
+        <input id="inusa" type="radio" name="loc" value="inside">
+
+        <label for="outusa">Outside: </label>
+        <input id="outusa" type="radio" name="loc" value="outside">
+
+        <h2>How was you service?</h2>
+
+        <select name="stars">
+            <option value="Great">3</option>
+            <option value="Okay">2</option>
+            <option value="Bad">1</option>
+        </select>
+
+        <h2>Any other feedback?</h2>
+        <textarea name="mytext" rows="8" cols="80"></textarea>        
+
+        <input type="submit">
+    </form>
+</body>
+</html>

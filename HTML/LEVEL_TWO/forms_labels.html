@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Bad way of adding labels -->
+    <h1>Do not use this method!</h1>
+    <form>
+        <label>
+            Enter Text:
+            <input type="text" name="" value="block one">
+        </label>
+        <label>
+            Enter Text:
+            <input type="text" name="" value="block two">
+        </label>
+        <input type="submit">
+    </form>
+    
+    <br>
+    <br>
+    
+    <!-- Correct way of adding labels -->
+    <h1>Use this method!</h1>
+    <form>
+        <label for="userinput">Enter Input:</label>
+        <input id="userinput" type="text" name="" placeholder="Hello!">
+        <input id="userinput" type="text" name="" placeholder="World!">
+
+        <input type="submit">
+    </form>
+
+    <br>
+    <br>
+
+    <!-- Using the 'required' attribute -->
+    <h1>Using the 'required' attribute</h1>
+    <form>
+        <input type="text" placeholder="not required">
+        <input type="text" placeholder="required" required>
+
+        <input type="submit">
+    </form>
+</body>
+</html>
