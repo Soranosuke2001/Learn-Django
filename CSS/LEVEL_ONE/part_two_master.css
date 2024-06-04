@@ -1,0 +1,20 @@
+body {
+    background: url(https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148902771.jpg);
+}
+
+div {
+    background: blue;
+
+    border-color: orange;
+    border-width: 4px;
+    border-style: double;
+}
+
+p {
+    color: deeppink;
+}
+
+span {
+    background: red;
+    color: black;
+}

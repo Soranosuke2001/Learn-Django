@@ -1,0 +1,32 @@
+.firstDiv {
+    color: blue;
+}
+
+.secondDiv {
+    color: red;
+}
+
+#singledout {
+    color: green;
+    text-decoration: line-through;
+}
+
+/* The '*' will overwrite all elements but the ids */
+/* * {
+    color: black;
+} */
+
+/* Selecting adjacent tags */
+h3 + ul {
+    border: 4px dotted purple;
+}
+
+/* Selecting nested tags */
+li a {
+    color: red;
+}
+
+li a[href="www.npr.org"] {
+    color: blue;
+    border: 5px solid orange;
+}
