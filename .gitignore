@@ -5,3 +5,5 @@
 /Course_Resources_2.zip
 
 **/.DS_Store
+**/my_env
+**/__pycache__
