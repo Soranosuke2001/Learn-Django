@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+{% extends "templates_app/base.html" %}
+{% load my_extras %}
+
+  {% block body_block %}
+    <h1>Welcome to Index!</h1>
+    <!-- <h2>This is the index.html showing</h2> -->
+     <h1>{{ text | testingcut:' ' }}</h1>
+     <h1>{{ number | add:"99" }}</h1>
+  {% endblock %}
+  
