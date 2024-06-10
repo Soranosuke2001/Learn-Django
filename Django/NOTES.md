@@ -99,6 +99,129 @@ This file is used to create test cases (functions) to test the code for the appl
 
 This file will contain functions that will handle requests and return responses.
 
+# Django Setting Up `settings.py` File
+
+Typically after we create the project with an application, there are a couple of lines of code to add to the settings file. 
+
+## `templates` Directory
+
+When creating html files for our webpage, the html files are stored in the `templates` directory.
+
+**File Tree Example:**
+
+```bash
+tree .
+.
+├── db.sqlite3
+├── first_app
+│   ├── __init__.py
+│   ├── __pycache__
+│   │   ├── __init__.cpython-311.pyc
+│   │   ├── admin.cpython-311.pyc
+│   │   ├── apps.cpython-311.pyc
+│   │   ├── models.cpython-311.pyc
+│   │   ├── urls.cpython-311.pyc
+│   │   └── views.cpython-311.pyc
+│   ├── admin.py
+│   ├── apps.py
+│   ├── migrations
+│   │   ├── 0001_initial.py
+│   │   ├── __init__.py
+│   │   └── __pycache__
+│   │       ├── 0001_initial.cpython-311.pyc
+│   │       └── __init__.cpython-311.pyc
+│   ├── models.py
+│   ├── tests.py
+│   ├── urls.py
+│   └── views.py
+├── first_project
+│   ├── __init__.py
+│   ├── __pycache__
+│   │   ├── __init__.cpython-311.pyc
+│   │   ├── settings.cpython-311.pyc
+│   │   ├── urls.cpython-311.pyc
+│   │   └── wsgi.cpython-311.pyc
+│   ├── asgi.py
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+├── manage.py
+├── media
+│   └── profile.jpg
+├── populate_first_app.py
+├── static
+│   ├── css
+│   │   └── mystyles.css
+│   └── images
+│       └── ayaka.jpeg
+└── templates
+    └── first_app
+        └── index.html
+
+12 directories, 32 files
+```
+
+Shown in the example above, we can see that the html files are stored inside the `templates` directory.
+
+In order for Django to be able to find the html files, we need to register it into the `TEMPLATES` variable inside the `settings.py` file.
+
+Note: Add the directory path to the `DIRS` key within the variable.
+
+```python
+TEMPLATES = [
+    {
+        "BACKEND": "django.template.backends.django.DjangoTemplates",
+        "DIRS": [
+          BASE_DIR / "templates"
+        ],
+        "APP_DIRS": True,
+        "OPTIONS": {
+            "context_processors": [
+                "django.template.context_processors.debug",
+                "django.template.context_processors.request",
+                "django.contrib.auth.context_processors.auth",
+                "django.contrib.messages.context_processors.messages",
+            ],
+        },
+    },
+]
+```
+
+## `static` Directory
+
+The `static` directory is used to store files such as:
+
+- Images
+- JavaScript Files
+- CSS Files
+
+Shown in the `File Tree` example, we can see that the `static` directory exists in the same level as the `templates` directory.
+
+In order for Django to be able to find the files inside the static directory, we need to create a new variable inside the `settings.py` file.
+
+Note: Near the bottom for the file exists a section dedicated for static files and add the following code below.
+
+```python
+STATICFILES_DIRS = [
+  BASE_DIR / "static"
+]
+```
+
+## `media` Directory
+
+Unlike the `static` directory, the `media` directory is used to store files that the user uploads.
+
+Shown in the `File Tree` example, we can see that the `media` directory exists in the same level as the `templates` and `static` directory.
+
+In order for Django to be able to find the files inside the static directory, we need to create 2 new variables inside the `settings.py` file.
+
+Note: After the `static` variables, add the following static variables.
+
+```python
+MEDIA_URL = "media/"
+MEDIA_ROOT = BASE_DIR / "media"
+```
+
 # Django Creating Models
 
 In order to setup the database, we first need to create classes in the `models.py` file. Each class will represent a single table.
